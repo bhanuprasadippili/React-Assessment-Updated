@@ -43,27 +43,29 @@ const Requistion = () => {
                <div className="form-div">
                <div>
                <label>Title</label>
-               <input name="Title" value={data.Title} />
+               <input name="Title" value={data.Title} required />
                </div>
                <div>
                <label>Openings</label>
-               <input name="Openings" value={data.Openings} />
+               <input name="Openings" value={data.Openings} required />
                </div>
                </div>
               <div className="form-div">
               <div>
                <label>Gender</label>
-               <input name="Gender" value={data.Gender} />
+               <input name="Gender" value={data.Gender} required />
                </div>
                <div>
                <label>Urgency</label>
-               <input name="Urgency" value={data.Urgency} />
+               <input name="Urgency" value={data.Urgency} required />
                </div>
               </div>
               <button type="submit">Submit</button>
             </form>
-            <button onClick={handleClick}>Next</button>
 
+            <span>
+            <button onClick={handleClick}>Next</button>
+            </span>
 
         </div>
     )

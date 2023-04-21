@@ -48,15 +48,15 @@ const Interview = () => {
             <form  onSubmit={handleSubmit} ref={formRef}>
                <div>
                <label>Mode</label>
-               <input name="Mode" value={data.Mode} />
+               <input name="Mode" value={data.Mode} required />
                </div>
                <div>
                <label>Duration</label>
-               <input name="Duration" value={data.Duration} />
+               <input name="Duration" value={data.Duration} required />
                </div>
                <div>
                <label>Language</label>
-               <input name="Language" value={data.Language} />
+               <input name="Language" value={data.Language} required />
                </div>      
                <button type="submit">Submit</button>
 

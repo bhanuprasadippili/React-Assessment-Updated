@@ -52,19 +52,19 @@ const Job = () => {
             <form onSubmit={handleSubmit} ref={formRef}>
                <div>
                <label>Title</label>
-               <input name="Title" value={data.Title} />
+               <input name="Title" value={data.Title} required />
                </div>
                <div>
                <label>Details</label>
-               <input name="Details" value={data.Details} />
+               <input name="Details" value={data.Details} required />
                </div>
                <div>
                <label>Location</label>
-               <input name="Location" value={data.Location} />
+               <input name="Location" value={data.Location} required />
                </div>
                <div>
                <label>Position</label>
-               <input name="Position" value={data.Position} />
+               <input name="Position" value={data.Position} required />
                </div>
                <button type="submit">Submit</button>
 
