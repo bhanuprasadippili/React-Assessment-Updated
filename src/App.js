@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import Requistion from './components/requistion';
+import Preview from './components/preview';
+import { Routes,Route } from 'react-router-dom';
+import Job from './components/job';
+import Interview from './components/interview';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route index element={<Requistion/>}/>
+        <Route path='job' element={<Job/>}/>
+        <Route path="interview" element={<Interview/>}/>
+      </Routes>
+
+      <Preview/>
     </div>
   );
 }
