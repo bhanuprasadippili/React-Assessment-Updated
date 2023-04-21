@@ -23,6 +23,8 @@ const Interview = () => {
         Duration: form.Duration.value,
         Language: form.Language.value,
        });
+
+       alert("Successfully Submitted")
     }
 
     console.log(data);

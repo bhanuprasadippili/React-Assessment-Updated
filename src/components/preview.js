@@ -1,14 +1,22 @@
 import "../styles/preview.scss";
-
+import { useSelector } from "react-redux";
 
 
 const Preview = () => {
+
+    const requisitionState = useSelector(state => state.info);
+    console.log(requisitionState);
+    const jobState = useSelector(state => state.info);
+    console.log(jobState);
+    const interviewState = useSelector(state => state.info);
+    console.log(interviewState);
     return (
         <div className="preview">
             <h2>Draft</h2>
             <div className="open">
-                <input />
-                <p>Openings</p>
+                <input placeholder="Title" name="Title" value={requisitionState.requistionData
+.Title} />
+                <p>Openings <input value={requisitionState.requistionData.Openings} /></p>
             </div>
 
             <div className="preview-form1">
@@ -16,11 +24,11 @@ const Preview = () => {
                 <div className="forms">
                 <div>
                     <p>Urgency</p>
-                    <input />
+                    <input value={requisitionState.requistionData.Urgency} />
                 </div>
                 <div>
                     <p>Gender</p>
-                    <input />
+                    <input value={requisitionState.requistionData.Gender} />
                 </div>
                 </div>
             </div>
@@ -30,22 +38,22 @@ const Preview = () => {
                 <div className="forms">
                 <div>
                     <p>Title</p>
-                    <input />
+                    <input value={jobState.jobData.Title} />
                 </div>
                 <div>
                     <p>Details</p>
-                    <input />
+                    <input value={jobState.jobData.Details} />
                 </div>
                 </div>
 
                 <div className="forms">
                 <div>
                     <p>Location</p>
-                    <input />
+                    <input value={jobState.jobData.Location} />
                 </div>
                 <div>
                     <p>Position</p>
-                    <input />
+                    <input value={jobState.jobData.Position} />
                 </div>
                 </div>
                 
@@ -56,16 +64,16 @@ const Preview = () => {
                 <div className="forms">
                 <div>
                     <p>Duration</p>
-                    <input />
+                    <input value={interviewState.interviewData.Duration}/>
                 </div>
                 <div>
                     <p>Language</p>
-                    <input />
+                    <input value={interviewState.interviewData.Language} />
                 </div>
                 </div>
                 <div>
                     <p>Mode</p>
-                    <input />
+                    <input value={interviewState.interviewData.Mode} />
                 </div>
             </div>
 
